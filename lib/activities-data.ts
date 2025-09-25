@@ -1,5 +1,6 @@
 import type { Activity, WeekendTheme } from "./types"
 
+// Generic activities that work anywhere
 export const PREDEFINED_ACTIVITIES: Activity[] = [
   // Outdoor Activities
   {
@@ -212,6 +213,154 @@ export const PREDEFINED_ACTIVITIES: Activity[] = [
   },
 ]
 
+// Pune-specific locations for AI suggestions
+export const PUNE_LOCATIONS: Activity[] = [
+  {
+    id: "shaniwar-wada",
+    name: "Shaniwar Wada",
+    category: "entertainment",
+    duration: 90,
+    icon: "🏰",
+    description: "Historic fortification and palace ruins in Pune city center",
+    mood: "adventurous",
+    mapImage: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "aga-khan-palace",
+    name: "Aga Khan Palace",
+    category: "entertainment",
+    duration: 120,
+    icon: "🏛️",
+    description: "Beautiful Italianate arches and lush gardens with Gandhi history",
+    mood: "relaxed",
+    mapImage: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "sinhagad-fort",
+    name: "Sinhagad Fort",
+    category: "outdoor",
+    duration: 240,
+    icon: "⛰️",
+    description: "Ancient hill fortress with trekking trails and panoramic views",
+    mood: "adventurous",
+    mapImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "fc-road",
+    name: "FC Road Food Walk",
+    category: "food",
+    duration: 150,
+    icon: "🍔",
+    description: "Street food paradise on Fergusson College Road",
+    mood: "happy",
+    mapImage: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "saras-baug",
+    name: "Saras Baug",
+    category: "outdoor",
+    duration: 90,
+    icon: "🌳",
+    description: "Popular garden with Ganesh temple and peaceful atmosphere",
+    mood: "relaxed",
+    mapImage: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "koregaon-park",
+    name: "Koregaon Park",
+    category: "social",
+    duration: 120,
+    icon: "🍸",
+    description: "Trendy area with cafes, pubs, and vibrant nightlife",
+    mood: "energetic",
+    mapImage: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "lal-mahal",
+    name: "Lal Mahal",
+    category: "entertainment",
+    duration: 60,
+    icon: "🏮",
+    description: "Historic red palace of Chhatrapati Shivaji Maharaj",
+    mood: "adventurous",
+    mapImage: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "pune-okayama-park",
+    name: "Pune-Okayama Park",
+    category: "wellness",
+    duration: 90,
+    icon: "🌸",
+    description: "Japanese-style garden with cherry blossoms and zen atmosphere",
+    mood: "relaxed",
+    mapImage: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "dagdusheth-temple",
+    name: "Dagdusheth Halwai Temple",
+    category: "wellness",
+    duration: 45,
+    icon: "🙏",
+    description: "Famous Ganpati temple with spiritual significance",
+    mood: "relaxed",
+    mapImage: "https://images.unsplash.com/photo-1582632228632-c57d0fef3877?w=400&h=200&fit=crop&auto=format&q=80"
+  },
+  {
+    id: "phoenix-mall",
+    name: "Phoenix Mall of the Millennium",
+    category: "entertainment",
+    duration: 180,
+    icon: "🛍️",
+    description: "Premier shopping destination with restaurants and entertainment",
+    mood: "happy"
+  },
+  {
+    id: "phoenix-marketcity",
+    name: "Phoenix MarketCity",
+    category: "entertainment",
+    duration: 180,
+    icon: "🏬",
+    description: "Modern shopping mall with multiplex and food court",
+    mood: "happy"
+  },
+  {
+    id: "parvati-hill",
+    name: "Parvati Hill",
+    category: "outdoor",
+    duration: 120,
+    icon: "🏔️",
+    description: "Historic hilltop temple with panoramic city views",
+    mood: "adventurous"
+  },
+  {
+    id: "osho-ashram",
+    name: "Osho International Meditation Resort",
+    category: "wellness",
+    duration: 120,
+    icon: "🧘",
+    description: "World-renowned meditation and spiritual center",
+    mood: "relaxed"
+  },
+  {
+    id: "khadakwasla-dam",
+    name: "Khadakwasla Dam",
+    category: "outdoor",
+    duration: 150,
+    icon: "🌊",
+    description: "Scenic dam with boating and picnic spots",
+    mood: "relaxed"
+  },
+  {
+    id: "rajiv-gandhi-zoo",
+    name: "Rajiv Gandhi Zoological Park",
+    category: "entertainment",
+    duration: 180,
+    icon: "🦁",
+    description: "Wildlife park with diverse animal species and safari",
+    mood: "adventurous"
+  },
+]
+
 export const WEEKEND_THEMES: WeekendTheme[] = [
   {
     id: "lazy",
@@ -223,6 +372,9 @@ export const WEEKEND_THEMES: WeekendTheme[] = [
     secondaryColor: "#dbeafe",
     accentColor: "#1d4ed8",
     icon: "🛋️",
+    image: "https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=500&h=300&fit=crop&auto=format",
+    mood: "Peaceful & Restful",
+    vibe: "Cozy blankets, warm tea, and gentle moments of self-care",
   },
   {
     id: "adventurous",
@@ -234,6 +386,9 @@ export const WEEKEND_THEMES: WeekendTheme[] = [
     secondaryColor: "#fed7aa",
     accentColor: "#ea580c",
     icon: "🏔️",
+    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=500&h=300&fit=crop&auto=format",
+    mood: "Thrilling & Explorative",
+    vibe: "Mountain peaks, hidden trails, and breathtaking discoveries",
   },
   {
     id: "family",
@@ -245,6 +400,9 @@ export const WEEKEND_THEMES: WeekendTheme[] = [
     secondaryColor: "#dcfce7",
     accentColor: "#16a34a",
     icon: "👨‍👩‍👧‍👦",
+    image: "https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=500&h=300&fit=crop&auto=format",
+    mood: "Warm & Connecting",
+    vibe: "Laughter, shared meals, and precious memories together",
   },
   {
     id: "productive",
@@ -256,6 +414,9 @@ export const WEEKEND_THEMES: WeekendTheme[] = [
     secondaryColor: "#f3e8ff",
     accentColor: "#9333ea",
     icon: "⚡",
+    image: "https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=500&h=300&fit=crop&auto=format",
+    mood: "Focused & Accomplished",
+    vibe: "Creative projects, organized spaces, and satisfying achievements",
   },
   {
     id: "social",
@@ -267,5 +428,8 @@ export const WEEKEND_THEMES: WeekendTheme[] = [
     secondaryColor: "#fce7f3",
     accentColor: "#db2777",
     icon: "🎉",
+    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=500&h=300&fit=crop&auto=format",
+    mood: "Vibrant & Joyful",
+    vibe: "Dancing lights, shared laughter, and unforgettable celebrations",
   },
 ]

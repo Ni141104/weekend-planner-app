@@ -52,35 +52,34 @@ export function DraggableActivityBrowserCard({ activity, onClick }: DraggableAct
     <Card
       ref={setNodeRef}
       style={style}
-      className={`cursor-grab active:cursor-grabbing hover:shadow-md transition-shadow border hover:border-primary group ${
-        isDragging ? "opacity-50 shadow-lg z-50" : ""
+      className={`cursor-grab active:cursor-grabbing hover:shadow-xl transition-all duration-200 border border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/40 group w-full hover:scale-105 ${
+        isDragging ? "opacity-50 shadow-2xl z-50 rotate-6 scale-110" : ""
       }`}
       onClick={onClick}
       {...attributes}
       {...listeners}
     >
-      <CardContent className="p-4 relative">
+      <CardContent className="p-3 relative">
         <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-          <GripVertical className="h-4 w-4 text-muted-foreground" />
+          <GripVertical className="h-3 w-3 text-foreground/50" />
         </div>
         <div className="text-center">
-          <div className="text-3xl mb-2">{activity.icon}</div>
-          <h3 className="font-medium mb-2">{activity.name}</h3>
-          <div className="flex flex-wrap gap-1 justify-center mb-2">
-            <Badge className={getCategoryColor(activity.category)} variant="secondary">
+          <div className="text-2xl mb-2 group-hover:scale-110 transition-transform duration-200">{activity.icon}</div>
+          <h3 className="font-medium text-xs mb-3 line-clamp-2 leading-tight text-foreground">{activity.name}</h3>
+          <div className="flex flex-col gap-1.5 mb-3">
+            <Badge className={`${getCategoryColor(activity.category)} text-xs py-0.5 px-2 rounded-full border-0`} variant="secondary">
               {activity.category}
             </Badge>
             {activity.mood && (
-              <Badge className={getMoodColor(activity.mood)} variant="secondary">
+              <Badge className={`${getMoodColor(activity.mood)} text-xs py-0.5 px-2 rounded-full border-0`} variant="secondary">
                 {activity.mood}
               </Badge>
             )}
           </div>
-          <div className="flex items-center justify-center gap-1 text-sm text-muted-foreground mb-2">
+          <div className="flex items-center justify-center gap-1 text-xs text-muted-foreground">
             <Clock className="h-3 w-3" />
-            {Math.floor(activity.duration / 60)}h {activity.duration % 60}m
+            {Math.floor(activity.duration / 60)}h{activity.duration % 60 > 0 ? ` ${activity.duration % 60}m` : ''}
           </div>
-          {activity.description && <p className="text-xs text-muted-foreground line-clamp-2">{activity.description}</p>}
         </div>
       </CardContent>
     </Card>
